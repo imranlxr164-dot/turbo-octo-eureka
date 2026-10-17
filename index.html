@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="YouTube Long Video और Shorts लिंक देखने, व्यवस्थित करने और अपने वीडियो के लिए सुरक्षित विकल्प पाने का टूल।">
+  <title>YouTube Link Toolkit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div class="logo">▶</div>
+      <p class="eyebrow">CREATOR TOOLKIT</p>
+      <h1>YouTube Link Toolkit</h1>
+      <p class="sub">Long videos और Shorts के लिंक पहचानें, preview देखें और अपने वीडियो डाउनलोड करने के आधिकारिक तरीके पाएँ।</p>
+    </header>
+
+    <section class="panel">
+      <label for="videoUrl">YouTube वीडियो या Shorts का लिंक डालें</label>
+      <div class="input-row">
+        <input id="videoUrl" type="url" placeholder="https://youtube.com/shorts/..." autocomplete="url">
+        <button id="checkBtn">लिंक जाँचें</button>
+      </div>
+      <p class="hint">यह GitHub Pages पर चलने वाला फ्रंटएंड टूल है। यह YouTube की किसी भी वीडियो फ़ाइल को सीधे डाउनलोड नहीं करता।</p>
+      <p id="message" class="message" role="status"></p>
+    </section>
+
+    <section id="result" class="panel result hidden">
+      <div class="result-head">
+        <div>
+          <p class="eyebrow">LINK FOUND</p>
+          <h2 id="videoType">Video</h2>
+          <p id="videoId" class="muted"></p>
+        </div>
+        <button id="copyBtn" class="secondary">लिंक कॉपी करें</button>
+      </div>
+      <div class="preview-wrap">
+        <iframe id="preview" title="YouTube video preview" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+      <div class="actions">
+        <a id="openLink" class="button-link" href="#" target="_blank" rel="noopener noreferrer">YouTube पर खोलें ↗</a>
+        <a id="shortsLink" class="button-link secondary-link" href="#" target="_blank" rel="noopener noreferrer">Shorts/वीडियो लिंक खोलें ↗</a>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>अपने वीडियो को डाउनलोड कैसे करें?</h2>
+      <ol>
+        <li><strong>अपने अपलोड किए वीडियो:</strong> YouTube Studio खोलें → Content → वीडियो के सामने मेन्यू (⋮) → Download, यदि विकल्प उपलब्ध हो।</li>
+        <li><strong>Google Takeout:</strong> अपने YouTube अपलोड का डेटा export करने के लिए <a href="https://takeout.google.com/" target="_blank" rel="noopener noreferrer">Google Takeout</a> इस्तेमाल करें।</li>
+        <li><strong>दूसरों के वीडियो:</strong> क्रिएटर की अनुमति लें या YouTube के आधिकारिक offline/download विकल्प का इस्तेमाल करें, जहाँ उपलब्ध हो।</li>
+      </ol>
+    </section>
+
+    <footer>
+      <p>यह स्वतंत्र creator utility है; YouTube/Google से संबद्ध नहीं है। YouTube के नियमों और कॉपीराइट का पालन करें।</p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
